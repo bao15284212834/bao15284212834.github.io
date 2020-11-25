@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>鲍永乐的博客</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <div id="vue" v-cloak>
+    <el-container>
+      <el-header>
+          <el-menu :default-active="defaultActive" class="el-menu-demo" mode="horizontal" @select="handleSelect"
+            background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+            <el-avatar :size="55" src="./img/byl.jpg"></el-avatar>
+            <el-menu-item index="./index.html">个人中心</el-menu-item>
+            <el-submenu index="2">
+              <template slot="title">我的工作台</template>
+              <el-menu-item index="2-1">正在开发中</el-menu-item>
+              <el-menu-item index="2-2">正在开发中</el-menu-item>
+              <el-menu-item index="2-3">正在开发中</el-menu-item>
+              <el-submenu index="2-4">
+                <template slot="title">正在开发中</template>
+                <el-menu-item index="2-4-1">正在开发中</el-menu-item>
+                <el-menu-item index="2-4-2">正在开发中</el-menu-item>
+                <el-menu-item index="2-4-3">正在开发中</el-menu-item>
+              </el-submenu>
+            </el-submenu>
+            <el-menu-item index="4">未知列表</el-menu-item>
+            <el-menu-item index="5">未知列表</el-menu-item>
+            <el-menu-item index="6">未知列表</el-menu-item>
+            <el-menu-item index="7">未知列表</el-menu-item>
+          </el-menu>
+      </el-header>
+      <el-container class="bg">
+          <el-main>
+            <el-card class="box-card">
+              <div slot="header" class="clearfix">
+                <span>前端学习笔记</span>
+                <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
+                <el-rate v-model="rate" style="float: right;"></el-rate>
+              </div>
+              <div class="text item">
+                <el-row :getter="20">
+                  <el-col>1.flex布局时可用“fit-content”来表示子元素的固定高度。</el-col>
+                  <el-col>2.在做移动端页面时，发现有的手机浏览器在内容滚动时会一直抖动，把body的overflow:hidden属性去掉就可以了。</el-col>
+                </el-row> 
+              </div>
+            </el-card>
+          </el-main>
+          <el-aside>
+            <el-container style="background-color: white;border-radius: 4px;">
+              <el-header style="text-align: center;">侧边栏标题</el-header>
+            </el-container>
+          </el-aside>
+      </el-container>
+      <el-footer>橙芽网络科技提供技术支持</el-footer>
+    </el-container>
+  </div>
+  <script src="./js/vue.min.js"></script>
+  <script src="./js/element.min.js"></script>
+  <script>
+    var vm=new Vue({
+      el: '#vue',
+      data (){
+          return {
+            circleUrl: "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
+            defaultActive: './index.html',
+            rate: 0,
+          }
+      },
+      methods :{
+          handleSelect (index, indexPath){
+              console.log(index)
+              console.log(indexPath)
+          }
+      }
+    })
+  </script>
+</body>
+</html>
