@@ -15,7 +15,7 @@
           <el-menu :default-active="defaultActive" class="el-menu-demo" mode="horizontal" @select="handleSelect"
             background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
             <el-avatar :size="55" src="./img/byl.jpg"></el-avatar>
-            <el-menu-item index="./index.html">个人中心</el-menu-item>
+            <el-menu-item index="./index.html">个人笔记</el-menu-item>
             <el-submenu index="2">
               <template slot="title">我的工作台</template>
               <el-menu-item index="2-1">正在开发中</el-menu-item>
@@ -46,6 +46,7 @@
                 <el-row :getter="20">
                   <el-col>1.flex布局时可用“fit-content”来表示子元素的固定高度。</el-col>
                   <el-col>2.在做移动端页面时，发现有的手机浏览器在内容滚动时会一直抖动，把body的overflow:hidden属性去掉就可以了。</el-col>
+                  <el-col>3.rem适配其实就是根据根标签的font-size的改变来控制元素的px变化</el-col>
                 </el-row> 
               </div>
             </el-card>
