@@ -44,12 +44,15 @@
               </div>
               <div class="text item">
                 <el-row :getter="20">
-                  <el-col>1.flex布局时可用“fit-content”来表示子元素的固定高度。</el-col>
+                  <el-col>1.flex布局时可用“fit-content”来表示子元素的自适应高度。</el-col>
                   <el-col>2.在做移动端页面时，发现有的手机浏览器在内容滚动时会一直抖动，把body的overflow:hidden属性去掉就可以了。</el-col>
                   <el-col>3.rem适配其实就是根据根标签的font-size的改变来控制元素的px变化</el-col>
                   <el-col>4.dom.getBoundingClientRect() -> 获取元素的位置信息</el-col>
                   <el-col>5.str.match()中参数可以放正则,但不支持^和$</el-col>
                   <el-col>6.原生js文件上传使用input控件+filereader构造函数</el-col>
+                  <el-col>7.移动端border边框不足1px时，部分手机不能正常显示边框，使用1px代替</el-col>
+                  <el-col>8.深拷贝和浅拷贝的区别浅拷贝传的是地址，前一个值变后一个也会跟着变化。深拷贝则运用递归给每一个值进行简单赋值。</el-col>
+                  <el-col>9.ES5常用的对象继承的方式：构造函数内属性使用call,apply,bind更改this指向,方法则直接使用prototype赋值</el-col>
                 </el-row> 
               </div>
             </el-card>
